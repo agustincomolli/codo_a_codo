@@ -1,2 +1,2 @@
-# codo_a_codo
-Ejercicios del curso Codo a Codo
+# Programa Codo a Codo
+Ejercicios del curso Full Stack Codo a Codo
