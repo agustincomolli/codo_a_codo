@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios en HTML 📝</title>
+</head>
+<body>
+  <h1>Formularios en HTML 📝</h1>
+  <p>
+    Los formularios son cajas de texto y botones que podemos encontrar en muchas páginas web y se utilizan para
+    realizar búsquedas o bien para introducir datos personales o claves de acceso. Los datos que el usuario introduce en
+    estos campos son enviados al correo electrónico del administrador del formulario o bien a un programa que se encarga
+    de procesarlo automáticamente
+  </p>
+  <h2>Ejemplo</h2>
+  <form action="mailto:agustincomolli@gmail.com" method="post" enctype="text/plain" accept-charset="UTF-8">
+    <label for="name">Nombre: </label>
+    <input type="text" name="name" id="name" size="40" value="¡Escribe tu nombre y apellido aquí!">
+    <br><br>
+    <label for="password">Contraseña: </label>
+    <input type="password" name="password" id="password" value="Tu contraseña">
+    <br><br>
+    <label for="email">Correo electrónico: </label>
+    <input type="email" name="email" id="email" size="30" value="alguien@dominio.com">
+    <br><br>
+    <label for="sex">Sexo: </label>
+    <select name="sex" id="sex">
+      <option value="male">Varón</option>
+      <option value="female">Mujer</option>
+    </select>
+    <br><br>
+    <label for="older">¿Eres mayor de edad? </label>
+    <input type="radio" name="older" id="older" value="yes" checked>Sí
+    <input type="radio" name="older" id="older" value="no"> No
+    <br><br>
+    <label for="comment">Comentarios: </label>
+    <textarea name="comment" id="comment" cols="60" rows="5">¡Tu comentario va aquí!</textarea>
+    <br><br>
+    <input type="checkbox" name="subscribe" id="subscribe" checked>Quiero suscribirme a tus correos electrónicos
+    <br><br>
+    <input type="submit" value="Enviar 📧">
+    <input type="reset" value="Borrar ❌">
+  </form>
+</body>
+</html>
