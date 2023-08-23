@@ -1,0 +1,46 @@
+/* Selectores de etiquetas */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: antiquewhite;
+  margin: 10px 20px;
+}
+
+p {
+  text-align: justify;
+  margin-top: 4px;
+}
+
+/* Selectores de clase */
+.subtitle {
+  color:teal;
+}
+
+.list {
+  font-size: 90%;
+}
+
+/* Selectores de id */
+#main-paragraph {
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+  margin-left: 50;
+  margin-right: 50;
+  background-color: lightgrey;
+  padding: 8px 4px;
+}
+
+#subtitle-3 {
+  color:royalblue;
+}
+
+/* Selectores que están dentro de un contenedor */
+#second-paragraph strong{
+  color:teal;
+}
+
+/* Estilos a varios selectores juntos */
+h2, h3 {
+  margin-top: 12px;
+  margin-bottom: 2px;
+}

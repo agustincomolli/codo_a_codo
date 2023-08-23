@@ -1,0 +1,25 @@
+/* Las hojas de estilo CSS cuentan de selectores que es el primer caso es
+   la p que hace referencia a la etiqueta <p></p>
+*/
+p {
+  /* Dentro del selector van colocados los atributos de estilo a modificar
+     en líneas separadas y al final de cada una de ellas deben terminar con ;
+     En el 1° caso el atributo es font-size y su valor es 12pt.
+  */
+  font-size: 12pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 36pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: wavy;
+  text-align: center;
+  color: teal;
+}
+
+body {
+  background-color:beige;
+  font-family: Arial, Helvetica, sans-serif;
+}
