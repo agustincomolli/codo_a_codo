@@ -44,3 +44,8 @@ h2, h3 {
   margin-top: 12px;
   margin-bottom: 2px;
 }
+
+/* Selectores de atributos */
+p[title] {
+  color:teal;
+}

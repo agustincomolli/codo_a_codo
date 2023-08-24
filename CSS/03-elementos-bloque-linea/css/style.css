@@ -1,0 +1,16 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div {
+  background-color: navy;
+  color:aliceblue;
+  margin: 4px;
+  padding: 4px;
+}
+
+span {
+  background-color:gold;
+  padding: 4px;
+  margin: 4px;;
+}
