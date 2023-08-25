@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipografías y Google Fonts</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <head>
+    <h1>Tipografías y Google Fonts</h1>
+  </head>
+  <main>
+    <article>
+      <h2>Familia tipográfica</h2>
+      <p>
+        Se establece con la propiedad font-family y es conveniente utilizar varias
+        fuentes separadas por comas para que si el usuario no tiene la fuente
+        principal, utilice una fuente alternativa.
+      </p>
+      <code>
+        body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+      </code>
+
+      <h2>Tamaño</h2>
+      <p>
+        El tamaño de la fuente se estable con la propiedad font-size y puede tener
+        los siguientes valores:
+      </p>
+
+      <h3>Medidas absolutas</h3>
+      <ul>
+        <li>xx-small</li>
+        <li>x-small</li>
+        <li>small</li>
+        <li>medium</li>
+        <li>large </li>
+        <li>x-large</li>
+        <li>xx-large</li>
+      </ul>
+      <code>
+        h3 {
+        font-size: medium;
+        }
+      </code>
+
+      <h3>Medidas relativas</h3>
+      <p>smaller | larger</p>
+      <code>
+        code {
+        font-size: larger;
+        }
+      </code>
+
+      <h3>Medidas específicas</h3>
+      <p>
+        Indicando el tamaño en pixeles (px), puntos (pt), porcentajes (%) u otros
+        (em, rem).
+      </p>
+      <code>
+        ul {
+        font-size: 0.9em;
+        }
+      </code>
+
+      <h2>Estilos de fuentes</h2>
+      <p class="italic">Con la propiedad font-style podemos poner nuestro texto en cursiva o itálica.</p>
+      <p class="bold">Y con la propiedad font-weight podemos darle más grosor a la fuente o ponerla en negrita</p>
+    </article>
+
+    <article class="google-fonts">
+      <h2>Google Fonts</h2>
+      <p>
+        Google Fonts es una plataforma proporcionada por Google que ofrece una amplia variedad de fuentes tipográficas
+        de alta calidad de forma gratuita para su uso en proyectos web. Estas fuentes están diseñadas para ser
+        fácilmente accesibles y utilizables en sitios web, lo que ayuda a mejorar la estética y legibilidad del
+        contenido en línea.
+      </p>
+      <p>Las principales características de Google Fonts incluyen:</p>
+      <ol>
+        <li>
+          <strong>Variedad de fuentes:</strong> Google Fonts ofrece una extensa colección de fuentes tipográficas en
+          diferentes estilos, como sans-serif, serif, display y monospace. Cada estilo puede incluir múltiples
+          variantes, como peso (ligero, normal, negrita, etc.) e inclinación (normal, cursiva).
+        </li>
+        <li>
+          <strong>Gratuidad:</strong> Todas las fuentes de Google Fonts son de uso gratuito. Puedes descargarlas y
+          usarlas en tus proyectos web sin costo alguno.
+        </li>
+        <li>
+          <strong>Fácil integración:</strong> Google Fonts proporciona códigos de enlace simples que puedes agregar a
+          tus archivos HTML o CSS para incorporar las fuentes en tus proyectos web. No es necesario descargar ni alojar
+          las fuentes tú mismo, ya que Google las almacena y las entrega a través de su red de distribución de contenido
+          (CDN).
+        </li>
+        <li>
+          <strong>Mejora del rendimiento:</strong> Las fuentes de Google Fonts se almacenan en servidores de Google, lo
+          que puede mejorar el tiempo de carga y rendimiento de tu sitio web debido a la distribución de contenido desde
+          servidores cercanos al usuario.
+        </li>
+        <li>
+          <strong>Personalización:</strong> Puedes personalizar las fuentes seleccionando las variantes específicas
+          (como peso y estilo) que mejor se adapten a tu diseño. Google Fonts te permite obtener el código personalizado
+          para las fuentes que desees usar.
+        </li>
+        <li>
+          <strong>Licencia abierta:</strong> La mayoría de las fuentes en Google Fonts se distribuyen bajo licencias de
+          código abierto, como la Licencia de Apertura de Fuentes (OFL, por sus siglas en inglés), lo que significa que
+          puedes utilizarlas en proyectos personales y comerciales sin preocuparte por problemas legales.
+        </li>
+      </ol>
+      <p>
+        En resumen, Google Fonts es una herramienta muy útil para diseñadores y desarrolladores web que desean mejorar
+        la estética de sus sitios web al utilizar fuentes tipográficas atractivas y legibles, sin incurrir en costos y
+        con una integración sencilla.
+      </p>
+      <h3>Agregar una fuente de Google Fonts</h3>
+      <p>
+        Ir a <a href="https://fonts.google.com/">Google Fonts</a>, seleccionar
+        la fuente haciendo clic en el botón "+ Select this style" junto a la 
+        variante de la fuente que te guste.
+      </p>
+      <p>
+        En el cuadro que aparece a la dereche busca donde dice <em>Use on the 
+        web</em> y elige la opción <strong>@import</strong>, luego copia
+        solamente las líneas que están entre las etiquetas &lt;style&gt; y 
+        pégalas en la cabecera de tu css.
+      </p>
+    </article>
+  </main>
+</body>
+</html>

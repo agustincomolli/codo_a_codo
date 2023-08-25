@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  font-size: medium;
+}
+
+ul {
+  font-size: 0.9em;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.google-fonts {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+.google-fonts h2,
+.google-fonts h3 {
+  font-family: 'Barriecito', cursive;
+}
+
+.google-fonts h2 {
+  font-size: 1.8em;
+}
+
+.google-fonts h3 {
+  font-size: 1.3em;
+}
