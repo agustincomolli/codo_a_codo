@@ -1,0 +1,26 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip:after {
+  content: 'Info: ' attr(data-tooltip);
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  background-color: lightyellow;
+  color: black;
+  font-size: small;
+  font-weight: 100;
+  font-style: normal;
+  padding: 2px;
+  opacity: 0;
+  transition: 0.5s opacity;
+}
+
+.tooltip:hover:after {
+  opacity: 1;
+}
