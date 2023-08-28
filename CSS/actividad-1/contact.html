@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Recetario: Contacto</title>
+  <!-- Icono del sitio web -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Encabezado del sitio web. -->
+  <header>
+    <!-- Barra de navegación en el sitio. -->
+    <nav>
+      <a href="index.html">🏠 Inicio</a>
+      <a href="about.html">Acerca de mi</a>
+    </nav>
+    <h1>Mi Recetario de cocina 🧑‍🍳</h1>
+  </header>
+  <!-- Cuerpo principal del sitio. -->
+  <main>
+    <div id="container-form">
+      <div id="form-contact">
+        <h2>Contacto ✏️</h2>
+        <!-- Formulario de contacto -->
+        <form action="mailto:agustincomolli@gmail.com?subject=Recetas de cocina" method="post">
+          <label for="name">Nombre: </label>
+          <input type="text" name="name" id="name" placeholder="Escribe aquí tu nombre completo" size="50">
+          <br><br>
+
+          <label for="email">Correo 📧: </label>
+          <input type="email" name="email" id="email" size="50">
+          <br><br>
+
+          <label for="age">Edad: </label>
+          <input type="number" name="age" id="age" min="1" max="99">
+          <br><br>
+
+          <label for="male">Sexo: </label>
+          <input type="radio" name="sex" id="male" value="male"><label for="male">Varón 🧔🏻‍♂️</label>
+          <input type="radio" name="sex" id="female" value="female"><label for="female">Mujer 👩🏻</label>
+          <br><br>
+
+          <label for="subject">Asunto: </label>
+          <select name="subject" id="subject">
+            <option value="suggestions">Sugerencias</option>
+            <option value="problems">Problemas con el sitio</option>
+            <option value="others">Otro asunto</option>
+          </select>
+          <br><br>
+
+          <label for="comments">Comentarios: </label>
+          <br>
+          <textarea name="comments" id="comments" cols="60" rows="10"
+            placeholder="Escribe tus comentarios aquí."></textarea>
+          <br><br>
+
+          <input type="checkbox" name="suscribe" id="suscribe"> Quiero suscribirme al boletín de novedades. 📰
+          <br><br>
+
+          <input type="submit" value="Enviar formulario">
+          <input type="reset" value="Reiniciar formulario">
+        </form>
+      </div>
+    </div>
+  </main>
+  <!-- Pie de página del sitio web. -->
+  <footer>
+    <!-- Links a mis redes sociales -->
+    <p>
+      <a href="https://www.facebook.com/agustincomolli" target="_blank" title="Facebook">
+        <img src="./img/facebook.png" alt="Facebook" height="24px">
+      </a>
+      <a href="https://www.instagram.com/agustincomolli/" target="_blank" title="Instagram">
+        <img src="./img/instagram.png" alt="Instagram" height="24px">
+      </a>
+      <a href="https://www.linkedin.com/in/agustincomolli/" target="_blank" title="Linkedin">
+        <img src="./img/linkedin.png" alt="Linkedin" height="24px">
+      </a>
+      <a href="https://twitter.com/agustincomolli" target="_blank" title="Twitter">
+        <img src="./img/twitter.png" alt="Twitter" height="24px">
+      </a>
+    </p>
+    <p>Sitio web creado por Agustín Comolli en 2023.</p>
+  </footer>
+</body>
+</html>

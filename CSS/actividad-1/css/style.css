@@ -1,0 +1,87 @@
+/* 
+  Paleta de colores:
+  #9A3B3B
+  #C08261
+  #E2C799
+  #F2ECBE
+*/
+
+body {
+  margin: 0;
+  background-color: #F2ECBE;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background-color: #9A3B3B;
+  padding: 10px;
+  color: #F2ECBE;
+}
+
+header {
+  height: 80px;
+}
+
+nav a {
+  background-color: #F2ECBE;
+  padding: 4px 8px;
+  font-size: small;
+  font-weight: bold;
+  margin: auto 4px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #9A3B3B;
+}
+
+nav a:hover {
+  background-color: #C08261;
+}
+
+main {
+  padding: 20px 40px;
+  font-size: 90%;
+}
+
+footer {
+  text-align: center;
+  height: 60px;
+}
+
+h1 {
+  text-align: center;
+}
+
+footer p {
+  margin: 4px;
+  font-size: smaller;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+#recipes {
+  height: 63vh;
+}
+
+#container-form {
+  display: flex;
+  justify-content: center;
+}
+
+#container-form h2 {
+  margin-top: 0px;
+}
+
+input,
+select {
+  padding: 2px;
+}
+
+input[type=submit],
+input[type=reset] {
+  padding: 4px;
+  width: 230px;
+}
