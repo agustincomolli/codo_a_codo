@@ -6,6 +6,10 @@
   #F2ECBE
 */
 
+*{
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: #F2ECBE;
@@ -18,10 +22,6 @@ footer {
   background-color: #9A3B3B;
   padding: 10px;
   color: #F2ECBE;
-}
-
-header {
-  height: 80px;
 }
 
 /* 
@@ -64,15 +64,16 @@ nav ul li a:hover {
 main {
   padding: 20px 40px;
   font-size: 90%;
+  min-height: 83.4vh;
 }
 
 footer {
   text-align: center;
-  height: 60px;
 }
 
 h1 {
   text-align: center;
+  margin-block-end: 0;
 }
 
 footer p {
@@ -84,17 +85,13 @@ footer a {
   text-decoration: none;
 }
 
-#recipes {
-  height: 63vh;
-}
-
 #container-form {
   display: flex;
   justify-content: center;
 }
 
 #container-form h2 {
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 input,
@@ -109,7 +106,7 @@ input[type=reset] {
 }
 
 .recipe {
-  margin: auto 100px;
+  margin: 20px 100px;
   padding: 10px 100px;
   background-color: #E2C799;
   border-radius: 10px;
