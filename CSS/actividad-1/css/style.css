@@ -33,6 +33,7 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  float: right;
 }
 
 /* 
@@ -105,4 +106,16 @@ input[type=submit],
 input[type=reset] {
   padding: 4px;
   width: 230px;
+}
+
+.recipe {
+  margin: auto 100px;
+  padding: 10px 100px;
+  background-color: #E2C799;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px gray;
+}
+
+.recipe img{
+  width: 300px;
 }

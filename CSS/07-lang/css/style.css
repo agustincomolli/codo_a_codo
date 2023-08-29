@@ -1,0 +1,20 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p {
+  padding-right: 10px;
+}
+
+p[lang="it"]::before {
+  content: url("../img/bandera-italiana.png");
+}
+
+
+p[lang="en"]::before {
+  content: url("../img/bandera-gran-bretaña.png");
+}
+
+p[lang="fr"]::before {
+  content: url("../img/bandera-francesa.png")
+}
