@@ -24,7 +24,27 @@ header {
   height: 80px;
 }
 
-nav a {
+/* 
+Barra de menú::
+  Quitar la viñeta de la lista,
+  Quitar margenes y padding.
+*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  Que cada item de la lista esté en una sola línea
+  uno a la izquierda del otro.
+ */
+nav ul li{
+  float: left;
+}
+
+/* Formato de cada link */
+nav ul li a {
   background-color: #F2ECBE;
   padding: 4px 8px;
   font-size: small;
@@ -35,7 +55,8 @@ nav a {
   color: #9A3B3B;
 }
 
-nav a:hover {
+/* Cuando pasas el puntero sobre un link cambia de color. */
+nav ul li a:hover {
   background-color: #C08261;
 }
 
