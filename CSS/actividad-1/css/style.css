@@ -6,6 +6,9 @@
   #F2ECBE
 */
 
+/* Importando una fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
 *{
   box-sizing: border-box;
 }
@@ -60,12 +63,13 @@ nav ul li a {
 /* Cuando pasas el puntero sobre un link cambia de color. */
 nav ul li a:hover {
   background-color: #C08261;
+  color: #F2ECBE;
 }
 
 main {
   padding: 20px 40px;
   font-size: 90%;
-  min-height: 75.4vh;
+  min-height: 79.5vh;
 }
 
 footer {
@@ -75,6 +79,10 @@ footer {
 h1 {
   text-align: center;
   margin-block-end: 0;
+  /* Usando la fuente importada */
+  font-family: 'Sofia', cursive;
+  text-shadow: 3px 3px 4px black;
+  letter-spacing: 1px;
 }
 
 iframe {
