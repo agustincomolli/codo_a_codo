@@ -1,0 +1,47 @@
+/* 
+  Sin border-box los elementos medirían:
+  width + padding + border 
+*/
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container {
+  margin: 0 auto;
+  background-color: lightcoral;
+  width: 90%;
+  height: calc(100vh - 95px);
+  /* margin: 20px; */
+  padding: 20px;
+}
+
+#box {
+  width: 180px;
+  height: 180px;
+  background-color: navy;
+  border: 8px solid red;
+  margin: 40px;
+  padding: 40px;
+}
+
+#box:hover {
+  border: 8px outset red;
+}
+
+#box:active {
+  border: 8px inset red;
+}
+
+#box h2 {
+  color: aliceblue;
+  text-align: center;
+}
+
+#box p {
+  color: green;
+}
