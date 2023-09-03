@@ -109,9 +109,16 @@ footer a {
   margin-top: 20px;
 }
 
+#form-contact {
+  margin-top: 20px;
+  padding: 40px;
+  background-color: #E2C799;
+  border-radius: 4px;
+}
+
 input,
 select {
-  padding: 2px;
+  padding: 4px;
 }
 
 input[type=submit],
