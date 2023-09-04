@@ -1,0 +1,39 @@
+* {
+  /* Que no se agranden los elementos al sumar border o padding */
+  box-sizing: border-box;
+}
+
+.box-1 {
+  width: 200px;
+  height: 200px;
+  background-color: lightpink;
+  /* Margen interno o padding de 15 pixeles */
+  padding: 15px;
+}
+
+.box-2 {
+  width: 200px;
+  height: 200px;
+  /* Borde de un 2 pixel */
+  border: 2px solid blue;
+  background-color: lightblue;
+}
+
+.box-3 {
+  width: 200px;
+  height: 200px;
+  background-color: lightgreen;
+  /* Margen externo de 10 pixeles */
+  margin: 10px;
+  float: left;
+}
+
+.box-4 {
+  width: 200px;
+  height: 200px;
+  background-color:lightgoldenrodyellow;
+  border: 2px solid gold;
+  padding: 15px;
+  margin: 10px;
+  float: right;
+}
