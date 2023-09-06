@@ -1,0 +1,25 @@
+.grid-container {
+  background-color: lightcyan;
+  width: 100%;
+  display: grid;
+  /* Generar una grilla de 3 columnas, la 2º columna abarca 2 celdas */
+  /* grid-template-columns: 200px 200px 200px; */
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px;
+  column-gap: 10px;
+  row-gap: 5px;
+}
+
+.grid-header {
+  background-color: blue;
+  color: white;
+  font-weight: bolder;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.grid-item {
+  background-color: brown;
+  border: 1px solid lightcoral;
+  grid-row-start: 2;
+}
