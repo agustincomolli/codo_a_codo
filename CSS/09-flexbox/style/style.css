@@ -12,14 +12,17 @@ body {
   flex-direction: row;
   /* Hacer que los items ocupen varias líneas */
   flex-wrap: wrap;
-  /* Dar un espacio solamente entre los items */
-  gap: 20px;
+  /* Dar un espacio solamente entre los items. Los dos valores son uno para las columnas y otro para las filas. */
+  gap: 80px 40px;
   margin-bottom: 1rem;
 }
 
 .aligned {
   /* Alinear los items en el eje principal, en este caso eje X */
   justify-content: center;
+  /* Alinear los items en el eje secundario, en este caso el eje Y */
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 .item {
@@ -28,4 +31,22 @@ body {
   height: 150px;
   color: white;
   font-size: 5rem;
+  /* Utilizar flex para alinear el contenido de los items. */
+  display: flex;
+  /* Alinear el contenido de los items en sus ejes X y luego Y */
+  justify-content: center;
+  align-items: center;
+}
+
+.item-1 {
+  /* Poner el item en el último lugar. */
+  order: 13;
+}
+
+/* Si la pantalla es menor a 768 pixeles */
+@media screen and (max-width:768px) {
+  /* Distribuir los elementos en columnas */
+  .aligned {
+    flex-direction: column;
+  }
 }
