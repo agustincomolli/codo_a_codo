@@ -1,0 +1,42 @@
+* {
+  /* Establecer el tamaño de los contenedores a border-box */
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1rem;
+  height: 100%;
+}
+
+body,
+header,
+main,
+footer {
+  border: 3px red solid;
+  min-height: 50px;
+  min-width: 400px;
+  margin: 0.5rem;
+}
+
+main {
+  min-height: 200px;
+}
+
+main>div,
+main>aside {
+  min-height: 180px;
+  margin: 0.5rem;
+  border: 2px solid blue;
+}
+
+.main-section {
+  min-height: 50px;
+  margin: 0.5rem;
+  border: 2px solid green;
+}
+
+.main-section article {
+  margin: 0.5rem;
+  border: 2px solid purple;
+  min-height: 20px;
+}
