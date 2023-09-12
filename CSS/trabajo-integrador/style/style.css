@@ -12,31 +12,104 @@ body,
 header,
 main,
 footer {
-  border: 3px red solid;
+  /* border: 3px red solid; */
   min-height: 50px;
   min-width: 400px;
   margin: 0.5rem;
+  background-color: white;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+header {
+  box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
 }
 
 main {
   min-height: 200px;
-}
+  overflow: auto;
+ }
 
+/* Contenido principal del sitio. */
 main>div,
 main>aside {
   min-height: 180px;
   margin: 0.5rem;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
+}
+
+article img {
+  height: 360px;
+}
+
+.header-logo {
+  width: auto;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+.header-logo img {
+  height: 50px;
+}
+
+.header-menubar {
+  left: auto;
+  position: relative;
+  top: auto;
+  width: auto;
+  display: inline-block;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.header-menubar ul{
+  list-style: none;
+}
+
+.header-menubar li {
+  float: left;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0.5rem 0;
+}
+
+.header-menubar a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.header-menubar a:hover {
+  color: #654f76;
+}
+
+.main-content {
+  height: auto;
+  width: 65%;
+  float: left;
+}
+
+.secondary-content {
+  min-width: 32.5%;
+  width: auto;
+  float: left;
 }
 
 .main-section {
   min-height: 50px;
   margin: 0.5rem;
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 
 .main-section article {
   margin: 0.5rem;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   min-height: 20px;
+}
+
+#gif-neko {
+  width: 100%;
 }
