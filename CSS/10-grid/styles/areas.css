@@ -1,0 +1,33 @@
+@import url("style.css");
+
+.parent {
+  background-color: lightgrey;
+  color: antiquewhite;
+  min-height: 200px;
+  display: grid;
+  grid-template-areas: 
+    "grid-header grid-header grid-header"
+    "grid-menu grid-content grid-content"
+    "grid-footer grid-footer grid-footer";
+  grid-template-rows: 100px 400px 100px;
+}
+
+.parent header {
+  grid-area: grid-header;
+  background-color: indigo;
+}
+
+.parent .menu {
+  grid-area: grid-menu;
+  background-color: darkred;
+}
+
+.parent .content {
+  grid-area: grid-content;
+  background-color: darkgreen;
+}
+
+.parent footer {
+  grid-area: grid-footer;
+  background-color: darkslategrey;
+}

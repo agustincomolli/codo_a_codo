@@ -1,0 +1,41 @@
+@import url("style.css");
+
+.container {
+  display: grid;
+  grid-template-columns: [col-start] 1fr [mid-start] 1fr [mid-end] 1fr [col-end];
+  grid-template-rows: [row-start] 1fr [row-mid-start] 1fr [row-mid-end] 1fr [row-end];
+  min-height: 300px;
+  color: white;
+  border: 5px solid black;
+}
+
+.header {
+  background: indigo;
+  /* Ocupa toda la fila inicial, rueda el resto a las siguientes */
+  grid-column-start: col-start;
+  grid-column-end: col-end;
+}
+
+.sidebar {
+  background: black;
+  /* Realmente no hace falta, porque ya está colocada en este lugar */
+  /* Usando atajos */
+  grid-row: row-mid-start / row-mid-end;
+}
+
+.content {
+  background: orangered;
+  /* Ocupa las dos celdas de la derecha de la fila central */
+  grid-column: mid-start / col-end;
+
+  /* grid-row: row-mid-start / row-mid-end; */
+  /* Aprovenchando los sufijos start y end */
+  grid-row: row-mid;
+}
+
+.footer {
+  background: royalblue;
+  /* Ocupa toda la fila final */
+  grid-column: col;
+  grid-row: row-mid-end / row-end;
+}

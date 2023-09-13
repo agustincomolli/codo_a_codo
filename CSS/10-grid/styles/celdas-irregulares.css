@@ -1,0 +1,48 @@
+@import url(style.css);
+
+.parent {
+  background-color: lightgrey;
+  min-height: 200px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.item {
+  background-color: indigo;
+  color: white;
+}
+
+.item-1 {
+  background-color: blueviolet;
+
+  /* Hacer que el item empiece en la línea 2 de la grilla. */
+  grid-column-start: 2;
+  /* Hacer que el item termine en la línea 4 de la grilla
+     haciendo que el item ocupe 2 columnas. */
+  grid-column-end: 4;
+
+  /* Hacer que el item empiece en la línea 1 de las filas */
+  grid-row-start: 1;
+  /* Hacer que el item termina en la línea 3 de las filas
+     haciendo que el item ocupe dos filas. */
+  grid-row-end: 3;
+}
+
+.item-7 {
+  background-color: steelblue;
+  
+  /* grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 6; */
+
+  /* Usando atajos: */
+  grid-column: 1 / 3;
+  grid-row: 4 / 6;
+}
+
+.item-10{
+  /* Expandir un item en 3 columnas */
+  grid-column: span 3;
+}

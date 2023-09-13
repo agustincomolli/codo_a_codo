@@ -1,0 +1,26 @@
+@import url("style.css");
+
+.parent {
+  background-color: lightgray;
+  min-height: 200px;
+  /* Crear una grilla */
+  display: grid;
+
+  /* Establecer cuántas columnas va a tener. */
+  /* grid-template-columns: repeat(2,1fr 50px); */
+
+  /* Establecer el número de filas. */
+  /* grid-template-rows: 50px 40px 50px; */
+
+  /* Propiedad de atajo para establecer filas y columnas */
+  grid-template: repeat(2, 50px 100px) / 100px 200px;
+
+  /* Establecer el espaciado entre items */
+  gap: 10px;
+}
+
+.item {
+  background-color: indigo;
+  font-size: 2rem;
+  color: #fff;
+}

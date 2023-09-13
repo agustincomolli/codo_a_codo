@@ -1,0 +1,61 @@
+@import url("style.css");
+
+.parent {
+  background-color: lightgray;
+  min-height: 300px;
+  display: grid;
+  /* Crear dos columnas. */
+  grid-template-columns: repeat(2, 1fr);
+  /* Crear dos filas. */
+  grid-template-rows: repeat(2, 1fr);
+  /* Establecer el espaciado entre celdas a 20px */
+  gap: 20px;
+
+  /* Alinear el contenido de las celdas en el eje X */
+  /* justify-items: stretch; */
+  /* Alinear el contenido de las celdas en el eje Y */
+  /* align-items: stretch; */
+  place-items: strech;
+
+  /* Alinear la grilla en el eje X del contenedor padre. */
+  /* justify-content: center; */
+  /* Alinear la grilla en el eje Y del contenedor padre. */
+  /* align-content: center; */
+  place-content: center;
+}
+
+.item {
+  background-color: indigo;
+  color: white;
+  font-weight: bold;
+
+  /* Para centrar el contenido de la celda. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-2 {
+  background-color: lime;
+  /* Alinear un sólo item. */
+  /* justify-self: end;
+  align-self: end; */
+
+  /* Propiedad de atajo para lo anterior. */
+  /* place-self: end; */
+
+  /* Orden de los items */
+  order: 1;
+}
+
+.item-4 {
+  background-color: blueviolet;
+  order: 2;
+}
+
+.sub-item {
+  width: 50px;
+  height: 50px;
+  background-color: darkred;
+}
