@@ -1,0 +1,29 @@
+/* Estilos para el NAV */
+nav {
+  background-color: var(--bg-color);
+  display: flex;
+  /* Distribuir en el eje X */
+  justify-content: space-between;
+  /* Centrar en eje Y */
+  align-items: center;
+  padding: 20px 40px;
+}
+
+nav h1 {
+  color: var(--primary-color);
+}
+
+nav ul {
+  display: flex;
+  /* Espaciar los items */
+  gap: 40px;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}

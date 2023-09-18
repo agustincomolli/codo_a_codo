@@ -1,0 +1,11 @@
+/* Importar todos los CSS */
+@import "./partials/_variables.css";
+@import "./partials/_general.css";
+@import "./partials/_header.css";
+@import "./partials/_main.css";
+@import "./partials/_footer.css";
+
+@font-face {
+  font-family: 'Jost'; /* Nombre que le das a tu fuente */
+  src: url('../fonts/Jost-VariableFont_wght.ttf'); /* Ruta relativa a la fuente TTF */
+}

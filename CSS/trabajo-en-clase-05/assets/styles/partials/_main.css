@@ -1,0 +1,36 @@
+.section-main {
+  position: sticky;
+  top:0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 0;
+}
+
+.main-image {
+  height: 200px;
+}
+
+.biography {
+  width: 450px;
+}
+
+.skill {
+  text-align: center;
+  margin: auto;
+}
+
+.skill-title {
+  margin: 10px 10px 30px 10px;
+}
+
+.skill-image {
+  height: 150px;
+  width: 150px;
+  background-color: #ffff;
+  border-radius: 11xp;
+  padding: 20px;
+  margin: 10px;
+}
