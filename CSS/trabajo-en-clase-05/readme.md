@@ -11,7 +11,7 @@
 
 ## Acerca de Mí
 
-¡Hola! Soy [Tu Nombre], un apasionado desarrollador de software con experiencia en [Tus Áreas de Especialización]. Me encanta crear soluciones creativas y efectivas para problemas complejos. Si deseas conocer más sobre mí, puedes visitar mi [página de perfil](#) para obtener más detalles.
+¡Hola! Soy Agustín, un apasionado desarrollador de software con experiencia en HTML, CSS, JS y Python. Me encanta crear soluciones creativas y efectivas para problemas complejos. Si deseas conocer más sobre mí, puedes visitar mi [página de perfil](#) para obtener más detalles.
 
 ## Proyectos Destacados
 
@@ -48,8 +48,8 @@ Si deseas obtener más detalles sobre las tecnologías con las que he trabajado,
 
 Si estás interesado en colaborar en un proyecto, tienes alguna pregunta o simplemente deseas saludar, no dudes en contactarme. Puedes encontrarme en las siguientes redes:
 
-- **Correo Electrónico**: tu@email.com
-- **LinkedIn**: [Tu Perfil de LinkedIn](URL de tu Perfil de LinkedIn)
-- **GitHub**: [Tu Perfil de GitHub](URL de tu Perfil de GitHub)
+- **Correo Electrónico**: agustincomolli@yahoo.com.ar
+- **LinkedIn**: https://www.linkedin.com/in/agustincomolli
+- **GitHub**: https://www.github.com/agustincomolli
 
 ¡Espero que disfrutes explorando mi portafolio! ¡Gracias por visitar!

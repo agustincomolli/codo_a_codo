@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuentes externas</title>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Fuentes externas</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Para instalar una fuente externa</h2>
+      <p>
+        Buscar la fuente que prefiera en Google Fonts o en otro sitio similar y descargar la familia entera.
+      </p>
+      <p>
+        Luego copiar el archivo con la tipografía a utilizar en nuestra carpeta fonts:
+      </p>
+      <ul class="path">
+        <li>projetc</li>
+        <li>
+          <ul>
+            <li>assets</li>
+            <ul>
+              <li>fonts</li>
+              <li>
+                <ul>
+                  <li>jost-regular.woff2</li>
+                  <li>jost-regular.ttf</li>
+                </ul>
+              </li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Enlazar la fuente al CSS</h2>
+      <p>
+        En nuestro archivo CSS agregamos el siguiente código:
+      </p>
+      <p>
+        <code>
+          @font-face {<br>
+          font-family: "Jost";<br>
+          src: url("../fonts/jost-regular.ttf") format("truetype");<br>
+          }
+        </code>
+      </p>
+      <p>
+        Y luego en el lugar donde se quiera usar la fuente poner por ejemplo:
+      </p>
+      <p>
+        <code>
+          body {<br>
+            font-family: "Jost",Arial, Helvetica, sans-serif;<br>
+          }
+        </code>
+      </p>
+    </section>
+    <section>
+      <h2>Optimizar la fuente</h2>
+      <p>
+        Para reducir el peso en kb de la fuente se puede convertir al formato woff2 a través del 
+        sitio: https://cloudconvert.com/
+      </p>
+    </section>
+  </main>
+</body>
+</html>

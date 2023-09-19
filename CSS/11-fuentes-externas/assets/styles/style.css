@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Jost";
+  src: 
+    url("../fonts/jost-regular.woff2") format("woff2"),
+    url("../fonts/jost-regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+body {
+  font-family: "Jost",Arial, Helvetica, sans-serif;
+}
+
+.path,
+.path ul{
+  list-style-type: none;
+}

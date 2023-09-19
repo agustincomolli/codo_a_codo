@@ -1,6 +1,15 @@
+/* Importar la fuente */
+@font-face {
+  font-family: "Jost";
+  src: 
+  url("../fonts/jost-regular.woff2") format("woff2"),
+  url("../fonts/jost-VF.woff") format("woff")
+  url("../fonts/jost-regular.ttf") format("truetype");
+}
+
 /* Variables */
 :root {
-  --font-family: "Jost, sans-serif;";
+  --font-family: "Jost", Arial, Helvetica, sans-serif;
   --bg-color: #ffffd9;
   --primary-color:#2a403d;
   --secondary-color: blue;
