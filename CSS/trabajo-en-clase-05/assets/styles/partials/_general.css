@@ -7,4 +7,12 @@
 
 body {
   font-family: "Jost", Arial, Helvetica, sans-serif;
+  /* Mantener el footer en la parte inferior */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Esto garantiza que el cuerpo ocupe al menos el alto completo de la ventana */
+}
+
+main {
+  flex: 1; /* El contenido del main ocupará todo el espacio disponible */
 }
