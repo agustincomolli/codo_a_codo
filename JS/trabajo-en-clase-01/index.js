@@ -1,5 +1,7 @@
 // Tipos de datos
 
+console.warn("¡Bienvenido a JavaScript!\n")
+
 // Strings
 let my_name = "Agustín";
 console.log("La variable my_name es de tipo", typeof my_name);
@@ -46,7 +48,7 @@ console.log("my_float = '1977'", "es ahora:", my_integer);
 // Conversión a números flotantes
 my_string = "10";
 my_float = parseFloat(my_string);
-console.log("\nmy_string = '" + my_string + "' es ahora:", my_float);
+console.log("\nmy_string = '" + my_string + "' es ahora:", my_float.toFixed(2));
 
 // Conversión a string
 my_string = String(my_integer);
