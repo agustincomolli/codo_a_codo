@@ -1,18 +1,49 @@
 let phrase = prompt("Escriba una frase:");
-let total_vowels = {
-    "a": 0,
-    "e": 0,
-    "i": 0,
-    "o": 0,
-    "u": 0,
-};
+let total_vowels = [0, 0, 0, 0, 0];
 
 for (let char of phrase) {
-    if ("aeiou".includes(char.toLowerCase())) {
-        total_vowels[char]++;
+    switch (char) {
+        case "a":
+            total_vowels[0]++;
+            break;
+        case "e":
+            total_vowels[1]++;
+            break;
+        case "i":
+            total_vowels[2]++;
+            break;
+        case "o":
+            total_vowels[3]++;
+            break;
+        case "u":
+            total_vowels[4]++;
+            break;
+        default:
+            break;
     };
 };
 
-for (let char in "aeiou") {
-    document.write("<p>" + char + ": " + total_vowels[char] + "</p>");
+for (let index in total_vowels) {
+    let char = "";
+    switch (parseInt(index)) {
+        case 0:
+            char = "a";
+            break;
+        case 1:
+            char = "e";
+            break;
+        case 2:
+            char = "i";
+            break;
+        case 3:
+            char = "o";
+            break;
+        case 4:
+            char = "u";
+            break;
+        default:
+            break;
+    };
+
+    document.write("<p>" + char + " = " + total_vowels[index] + "</p>");
 };
