@@ -13,3 +13,23 @@ function write_me(message, tag="p") {
     document.write(htmlContent);
 }
 
+
+function read_notes() {
+    let note = 0;
+    let count = 0;
+    total = 0;
+
+    note = parseInt(prompt("Ingrese un número:"));
+    while (note !== -1) {
+        count ++;
+        total += note;
+        note = parseInt(prompt("Ingrese un número:"));
+    };
+
+    return total / count;
+};
+
+
+let average = read_notes();
+
+write_me(`El promedio de notas es: ${average}`);
