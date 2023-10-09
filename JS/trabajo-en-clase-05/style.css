@@ -1,0 +1,19 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.code {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.normal {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.subtitle-1 {
+  color: teal;
+}
+
+.subtitle-2 {
+  color: brown;
+}
