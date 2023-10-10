@@ -13,3 +13,10 @@ function write_me(message, tag="p") {
     document.write(htmlContent);
 }
 
+function square(number) {
+    return number**2;
+};
+
+
+let my_number = parseInt(prompt("Ingrese un número:"));
+write_me(`El cuadrado de ${my_number} es ${square(my_number)}`);

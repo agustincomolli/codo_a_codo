@@ -13,3 +13,10 @@ function write_me(message, tag="p") {
     document.write(htmlContent);
 }
 
+
+function double(number) {
+    return number * 2;
+};
+
+let my_number = parseInt(prompt("Ingrese un número:"));
+write_me(`El doble de ${my_number} es ${double(my_number)}`);
