@@ -13,3 +13,11 @@ function write_me(message, tag="p") {
     document.write(htmlContent);
 }
 
+
+function getPerimeter(side) {
+    return side * 4;
+};
+
+
+let length_side = parseInt(prompt("Ingrese la longitud de un lado:"));
+write_me(`El perímetro del cuadrado es ${getPerimeter(length_side)}`);
