@@ -13,3 +13,10 @@ function write_me(message, tag="p") {
     document.write(htmlContent);
 }
 
+
+function getSurface(side){
+    return side * side;
+};
+
+let squareSide = parseInt(prompt("Ingrese la longitud de uno de los lados:"));
+write_me(`La superficie del cuadrado es ${getSurface(squareSide)}`);
