@@ -13,3 +13,12 @@ function write_me(message, tag="p") {
     document.write(htmlContent);
 }
 
+function circumference(radius) {
+    const pi = Math.PI;
+
+    return 2 * pi * radius;
+};
+
+
+let radius = parseFloat(prompt("Ingrese el radio del círculo:"));
+write_me(`La circunferencia es ${circumference(radius)}`);

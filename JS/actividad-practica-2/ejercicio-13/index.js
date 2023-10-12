@@ -13,3 +13,23 @@ function write_me(message, tag="p") {
     document.write(htmlContent);
 }
 
+
+function area(radius) {
+    return Math.PI * radius * radius;
+};
+
+
+let radius = parseFloat(prompt("Ingrese el radio del círculo:"));
+write_me(`El área del círculo es ${area(radius)}`);
+
+function addMessage(textToSpeak) {
+    const message = new SpeechSynthesisUtterance(textToSpeak);
+    speechSynthesis.speak(message);
+};
+
+
+const btnSpeak = document.querySelector(".speak");
+btnSpeak.addEventListener("click", ()=>{
+    addMessage("¡La puta que lo parió!");
+    addMessage("Que cagada");
+});
