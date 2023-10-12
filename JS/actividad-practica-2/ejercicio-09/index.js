@@ -13,3 +13,29 @@ function write_me(message, tag="p") {
     document.write(htmlContent);
 }
 
+
+function double(number) {
+    return number * 2;
+};
+
+
+function square(number) {
+    return number**2;
+};
+
+
+function next(number){
+    return ++number;
+};
+
+
+function printNextDoubleSquare(number) {
+    let nextNumber = next(number);
+    let doubleNumber = double(nextNumber);
+    write_me(`Tu número es ${number}`, "h2");
+    write_me(`El doble del número siguiente al cuadrado es ${square(doubleNumber)}`);
+}
+
+
+let my_number = parseInt(prompt("Ingrese un número:"));
+printNextDoubleSquare(my_number);
