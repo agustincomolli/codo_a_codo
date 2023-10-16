@@ -5,7 +5,7 @@
  * @param {string} [tag="p"] - La etiqueta HTML en la que se debe envolver el mensaje.
  * @returns {void} - No retorna ningún valor, ya que solo escribe en el documento HTML.
  */
-function write_me(message, tag="p", className = "message") {
+function writeMe(message, tag="p", className = "message") {
     // Genera el contenido HTML con la etiqueta especificada y el mensaje.
     const htmlContent = `<${tag} class='${className}'>${message}</${tag}>`;
 
@@ -72,7 +72,7 @@ let year = parseInt(userDateSplited[2])
 
 if (isValidDay(day) && isValidMonth(month) && isValidYear(year)) {
     let lastDayOfMonth = getDaysOfMonth(month, isYearLeap(year));
-    write_me(`El último día del mes de su fecha (${userDate}) es el <strong>${lastDayOfMonth}</strong>.`)
+    writeMe(`El último día del mes de su fecha (${userDate}) es el <strong>${lastDayOfMonth}</strong>.`)
 } else {
-    write_me("No ha ingresado una fecha correcta. Recargue la página y pruebe de nuevo.", "p", "warning");
+    writeMe("No ha ingresado una fecha correcta. Recargue la página y pruebe de nuevo.", "p", "warning");
 };

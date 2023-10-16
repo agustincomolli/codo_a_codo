@@ -5,7 +5,7 @@
  * @param {string} [tag="p"] - La etiqueta HTML en la que se debe envolver el mensaje.
  * @returns {void} - No retorna ningún valor, ya que solo escribe en el documento HTML.
  */
-function write_me(message, tag="p", className = "message") {
+function writeMe(message, tag="p", className = "message") {
     // Genera el contenido HTML con la etiqueta especificada y el mensaje.
     const htmlContent = `<${tag} class='${className}'>${message}</${tag}>`;
 
@@ -23,4 +23,4 @@ let number_1 = parseInt(prompt("Ingrese el 1° número:"));
 let number_2 = parseInt(prompt("Ingrese el 2° número:"));
 let number_3 = parseInt(prompt("Ingrese el 3° número:"));
 
-write_me(`El promedio de los tres números es: ${promedio3(number_1, number_2, number_3)}`);
+writeMe(`El promedio de los tres números es: ${promedio3(number_1, number_2, number_3)}`);

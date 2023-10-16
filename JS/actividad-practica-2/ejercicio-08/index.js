@@ -5,7 +5,7 @@
  * @param {string} [tag="p"] - La etiqueta HTML en la que se debe envolver el mensaje.
  * @returns {void} - No retorna ningún valor, ya que solo escribe en el documento HTML.
  */
-function write_me(message, tag="p", className = "message") {
+function writeMe(message, tag="p", className = "message") {
     // Genera el contenido HTML con la etiqueta especificada y el mensaje.
     const htmlContent = `<${tag} class='${className}'>${message}</${tag}>`;
 
@@ -30,8 +30,8 @@ function next(number){
 
 function print_double_next(number) {
     next_number = next(number)
-    write_me(`Tu número es ${number}`, "h2");
-    write_me(`El doble del número siguiente es ${double(next_number)}`);
+    writeMe(`Tu número es ${number}`, "h2");
+    writeMe(`El doble del número siguiente es ${double(next_number)}`);
 }
 
 

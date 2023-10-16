@@ -5,7 +5,7 @@
  * @param {string} [tag="p"] - La etiqueta HTML en la que se debe envolver el mensaje.
  * @returns {void} - No retorna ningún valor, ya que solo escribe en el documento HTML.
  */
-function write_me(message, tag = "p") {
+function writeMe(message, tag = "p") {
     // Genera el contenido HTML con la etiqueta especificada y el mensaje.
     const htmlContent = `<${tag}>${message}</${tag}>`;
 
@@ -50,7 +50,7 @@ let month = parseInt(userDateSplited[1]);
 
 if (isValidDay(day) && isValidMonth(month)) {
     let days = getDaysOfMonth(month);
-    write_me(`El mes de su fecha (${userDate}) tiene ${days} días.`)
+    writeMe(`El mes de su fecha (${userDate}) tiene ${days} días.`)
 } else {
-    write_me("No ha ingresado una fecha correcta. Recargue la página y pruebe de nuevo.");
+    writeMe("No ha ingresado una fecha correcta. Recargue la página y pruebe de nuevo.");
 };

@@ -5,7 +5,7 @@
  * @param {string} [tag="p"] - La etiqueta HTML en la que se debe envolver el mensaje.
  * @returns {void} - No retorna ningún valor, ya que solo escribe en el documento HTML.
  */
-function write_me(message, tag="p", className = "message") {
+function writeMe(message, tag="p", className = "message") {
     // Genera el contenido HTML con la etiqueta especificada y el mensaje.
     const htmlContent = `<${tag} class='${className}'>${message}</${tag}>`;
 
@@ -17,10 +17,10 @@ function write_me(message, tag="p", className = "message") {
 function write_wellcome(number_messages=1) {
     if (number_messages > 1) {
         for (let i= 1; i <= number_messages; i++) {
-            write_me("Bienvenidos al curso Full Stack");
+            writeMe("Bienvenidos al curso Full Stack");
         }
     } else {
-        write_me("Bienvenidos al curso Full Stack");
+        writeMe("Bienvenidos al curso Full Stack");
     }
 };
 
