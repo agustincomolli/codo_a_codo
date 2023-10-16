@@ -5,7 +5,7 @@
  * @param {string} [tag="p"] - La etiqueta HTML en la que se debe envolver el mensaje.
  * @returns {void} - No retorna ningún valor, ya que solo escribe en el documento HTML.
  */
-function write_me(message, tag="p") {
+function write_me(message, tag = "p") {
     // Genera el contenido HTML con la etiqueta especificada y el mensaje.
     const htmlContent = `<${tag}>${message}</${tag}>`;
 
@@ -13,3 +13,26 @@ function write_me(message, tag="p") {
     document.write(htmlContent);
 }
 
+
+function isYearLeap(year) {
+    if (year < 1582) {
+        return false;
+    };
+    if (year % 4 != 0) {
+        return false;
+    } else if (year % 100 != 0) {
+        return true;
+    } else if (year % 400 != 0) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+
+let year = parseInt(prompt("Ingrese un año:"));
+if (isYearLeap(year)) {
+    write_me(`El año ${year} es bisiesto.`);
+} else {
+    write_me(`El año ${year} No es bisiesto.`)
+}

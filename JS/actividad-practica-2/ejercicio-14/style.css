@@ -1,3 +1,13 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.warning {
+  color: red;
+}
+
+.answer {
+  color: teal;
+  font-style: italic;
+  font-weight: 600;
+}

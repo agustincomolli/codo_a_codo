@@ -5,13 +5,13 @@
  * @param {string} [tag="p"] - La etiqueta HTML en la que se debe envolver el mensaje.
  * @returns {void} - No retorna ningún valor, ya que solo escribe en el documento HTML.
  */
-function write_me(message, tag="p") {
+function write_me(message, tag="p", className = "message") {
     // Genera el contenido HTML con la etiqueta especificada y el mensaje.
-    const htmlContent = `<${tag}>${message}</${tag}>`;
+    const htmlContent = `<${tag} class='${className}'>${message}</${tag}>`;
 
     // Escribe el contenido HTML en el documento.
     document.write(htmlContent);
-}
+};
 
 
 function promedio3(num_1, num_2, num_3) {
