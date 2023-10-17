@@ -14,3 +14,17 @@ function writeMe(message, tag="p", className = "message") {
     document.write(htmlContent);
 };
 
+
+function toString(array= []) {
+    let arrayToString = "";
+    for (let index = 0; index < array.length-1; index++) {
+        arrayToString += '"' + array[index] + '", ';
+    }
+    arrayToString += '"' + array[array.length-1] + '"';
+    return arrayToString;
+};
+
+
+let colors = ["Red", "Green", "White", "Black"];
+let stringColors = toString(colors);
+writeMe(`El resultado es: ${stringColors}`);
