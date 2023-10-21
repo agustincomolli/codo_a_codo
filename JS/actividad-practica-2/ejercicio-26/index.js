@@ -14,3 +14,19 @@ function writeMe(message, tag="p", className = "message") {
     document.write(htmlContent);
 };
 
+
+function invertNumber(number) {
+    let stringNumber = number.toString();
+    let arrayNumber = [];
+    let inveredNumber = "";
+    for (let char of stringNumber) {
+        arrayNumber.unshift(char);
+    };
+    stringNumber = arrayNumber.join("");
+    return parseInt(stringNumber);
+};
+
+
+let number = parseInt(prompt("Ingrese un número:"));
+
+writeMe(`El número invertido es ${invertNumber(number)}`);
