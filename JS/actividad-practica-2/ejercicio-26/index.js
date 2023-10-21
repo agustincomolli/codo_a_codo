@@ -18,7 +18,6 @@ function writeMe(message, tag="p", className = "message") {
 function invertNumber(number) {
     let stringNumber = number.toString();
     let arrayNumber = [];
-    let inveredNumber = "";
     for (let char of stringNumber) {
         arrayNumber.unshift(char);
     };

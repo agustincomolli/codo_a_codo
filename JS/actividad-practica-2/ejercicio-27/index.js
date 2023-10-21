@@ -14,3 +14,22 @@ function writeMe(message, tag="p", className = "message") {
     document.write(htmlContent);
 };
 
+
+function sortText(text) {
+    let listOfChars = [];
+    for (let char of text) {
+        listOfChars.push(char);
+    };
+    let orderedChars = listOfChars.sort();
+    let orderedText = ""
+    for (char of orderedChars) {
+        orderedText += char;
+    };
+    return orderedText;
+};
+
+
+let userInput = prompt("Escriba una palabra o frase:");
+let sortedText = sortText(userInput);
+writeMe(`Tu palabra o frase es: ${userInput}.`);
+writeMe(`De forma ordenada es: ${sortedText}`);

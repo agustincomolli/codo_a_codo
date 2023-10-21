@@ -14,3 +14,19 @@ function writeMe(message, tag="p", className = "message") {
     document.write(htmlContent);
 };
 
+
+function getMaxLength(text) {
+    let words = text.split(" ");
+    let maxLengthWord = "";
+    for (word of words) {
+        if (word.length > maxLengthWord.length) {
+            maxLengthWord = word;
+        };
+    };
+    return maxLengthWord;
+};
+
+
+let phrase = prompt("Escribe una frase: ");
+writeMe(`Tu frase es: ${phrase}`);
+writeMe(`La palabra más larga es ${getMaxLength(phrase)}.`);

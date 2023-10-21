@@ -1,0 +1,17 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.title {
+  color: teal;
+}
+
+.vue-website {
+  text-decoration: none;
+  color: brown;
+  cursor: pointer;
+}
+
+#text {
+  padding: .25rem;
+}

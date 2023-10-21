@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hola mundo en VUE Js</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Directiva v-html cambia el innerHTML -->
+    <div v-html="title"></div>
+    <p>Aprendiendo VUE en el curso {{course}}</p>
+    <!-- Directiva v-bind enlaza a atributos HTML -->
+    <p><a v-bind:href="vueUrl" v-bind:class="vueWebsite" target="_blank">👉 Página oficial de Vue.js 👈</a></p>
+    <p>
+      La siguiente lista se llenó a través de un array:
+    </p>
+    <ul>
+      <!-- Directiva v-for sirve para llenar una lista a través de un array -->
+      <li v-for="fruit in fruits">
+        {{fruit.name}} - {{fruit.quantity}} <span v-if="fruit.quantity===0"> (Sin stock)</span>
+      </li>
+    </ul>
+    <p>
+      <label for="text">Escribe un mensaje: </label>
+      <!-- Directiva v-model vincula el valor de los elementos HTML a los datos de la aplicación -->
+      <input type="text" v-model="message" name="text" id="text" placeholder="Escribe aquí">
+    </p>
+    <p>{{message}}</p>
+    <p><button v-on:click="counter += 1">Contar clicks</button> <span> Clicks = {{counter}}</span></p>
+  </div>
+
+  <!-- CDN de VUE JS -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="script.js"></script>
+</body>
+</html>

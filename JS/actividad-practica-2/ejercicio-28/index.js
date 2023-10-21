@@ -14,3 +14,17 @@ function writeMe(message, tag="p", className = "message") {
     document.write(htmlContent);
 };
 
+
+function toTitle(text = "") {
+    let words = text.split(" ");
+    let inTitle = ""
+    for (word of words) {
+        inTitle += word[0].toUpperCase() + word.slice(1).toLowerCase() + " ";
+    };
+    return inTitle;
+};
+
+
+let phrase = prompt("Escribe algo: ");
+writeMe(`Has escrito: ${phrase}`);
+writeMe(`El formato en título es: ${toTitle(phrase)}`);
