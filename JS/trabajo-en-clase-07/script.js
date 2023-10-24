@@ -1,4 +1,5 @@
 const formSearch = document.querySelector("#search");
+const provincesSelector = document.querySelector("#provinces");
 
 function getProvinces() {
     return fetch(`https://apis.datos.gob.ar/georef/api/provincias`)
@@ -7,8 +8,16 @@ function getProvinces() {
 }
 
 
+function getCities(province) {
+    return fetch(`https://apis.datos.gob.ar/georef/api/municipios?provincia=${province}&max=200`)
+        .then(response => response.json())
+        .catch(error => console.log(error));
+}
+
+
 async function fillProvincesSelector() {
     const provincesSelector = document.querySelector("#provinces");
+    const citiesSelector = document.querySelector("#cities");
     const infoProvinces = await getProvinces();
 
     if (infoProvinces.provincias.length > 0) {
@@ -19,8 +28,34 @@ async function fillProvincesSelector() {
             optionProvince.text = province.nombre;
             provincesSelector.appendChild(optionProvince);
         };
-
+        citiesSelector.removeAttribute("disabled");
+        provincesSelector.value = "Buenos Aires";
+        changeProvince();
     };
+};
+
+
+async function changeProvince() {
+    let provinceSelected = provincesSelector.selectedOptions[0].text;
+    const infoCities = await getCities(provinceSelected);
+
+    if (infoCities.municipios.length > 0) {
+        let cities = infoCities.municipios;
+        cities.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        fillCities(cities);
+    };
+};
+
+
+function fillCities(cities) {
+    const citiesSelector = document.querySelector("#cities");
+    citiesSelector.innerHTML = "";
+    for (let city of cities) {
+        const optionCity = document.createElement("option");
+        optionCity.text = city.nombre;
+        citiesSelector.appendChild(optionCity);
+    };
+    citiesSelector.value = "Cañuelas";
 };
 
 
@@ -79,4 +114,5 @@ async function searchProvince(event) {
 
 
 formSearch.addEventListener("submit", searchProvince);
+provincesSelector.addEventListener("change", changeProvince);
 fillProvincesSelector();
