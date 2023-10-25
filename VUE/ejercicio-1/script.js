@@ -57,8 +57,8 @@ createApp({
 }).mount("#my-card")
 
 
-const CustomComponentTitle = {
-  template: "<h2>{{ title }}</h2>",
+const myTitle = {
+  template: "<h2 class='my-title'>{{ title }}</h2>",
   data() {
     return {
       title: "Mi primer componente",
@@ -69,6 +69,6 @@ const CustomComponentTitle = {
 
 const vueComponent = Vue.createApp({
   components: {
-    "my-title": CustomComponentTitle,
+    "my-title": myTitle,
   }
 }).mount("#vue-component");
