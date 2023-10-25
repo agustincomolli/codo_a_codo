@@ -8,10 +8,39 @@
 </head>
 <body>
   <!-- Usa un div con id "app" al que hace referencia el código de Vue.js -->
-  <div id="app">
+  <header id="header">
     <h1>{{ title }}</h1>
     <h2>{{ subtitle }}</h2>
+  </header>
+  
+  <main id="main">
+    <h3>Directiva v-html</h3>
+    <div v-html="teal_paragraph"></div>
+    <p><a v-bind:href="url" v-bind:class="url_class">Página oficial de Vue.js</a></p>
+    <div class="signin">
+      <p>Usuario: agustincomolli</p>
+      <p v-show="login">Identificando...</p>
+    </div>
+  </main>
+
+  <div class="my-card" id="my-card">
+    <ul>
+      <li>Nombre: {{ name }}</li>
+      <li>Apellido: {{ lastName }}</li>
+      <li>Edad: {{ age }}</li>
+    </ul>
+    <pre>Presentación: {{ details() }}</pre>
   </div>
+
+  <div class="vue-component" id="vue-component">
+    <my-title></my-title>
+  </div>
+  
+  <footer id="footer">
+    <p>
+      Vue.js fue desarrollado por <span v-text="developer"></span> en el año <span v-text="year"></span>
+    </p>    
+  </footer>
 
   <!-- CDN de Vue.js -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

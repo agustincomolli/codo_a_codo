@@ -1,3 +1,22 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.teal-paragraph {
+  color: teal;
+  text-align: center;
+}
+
+.vue-url {
+  text-decoration: none;
+  color: brown;
+  cursor: pointer;
+}
+
+.signin {
+  background-color: navy;
+  color: antiquewhite;
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem 4rem;
+}
