@@ -1,16 +1,23 @@
 # Esto es un comentario en Python
 print("¡Hola mundo!")
 
-# Definiendo una función.
 
-
-def add_two_numbers(number_1, number_2):
+def add_two_numbers(number_1, number_2):  # Definiendo una función
     return number_1 + number_2
 
 
 # Probando funciones y usando las fstrings para mostrar variables.
 print(
     f"Probando la función add_two_numbers con 2 + 5 = {add_two_numbers(2, 5)}")
+
+# Tipos de datos
+data_types = """
+Enteros     int         3
+Reales      float       14.7
+cadenas     string      "hola"
+lógicos     bool        true
+"""
+print(f"\nTipos de datos:{data_types}")
 
 # Operadores de Python
 matematical_operators = """
@@ -22,7 +29,7 @@ Módulo              7 % 5
 División entera     9 // 5
 Exponenciación      2**3
 """
-print(f"\nOperadores matemáticos: {matematical_operators}")
+print(f"Operadores matemáticos: {matematical_operators}")
 
 # Operadres lógicos
 logicals_operators = """
