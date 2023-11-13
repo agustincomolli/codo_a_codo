@@ -1,5 +1,6 @@
-from modulo import input_colorfully, print_colorfully, COLORS
+from interface_handler import *
 
-name = input_colorfully("Ingrese su nombre: ", COLORS.CYAN, COLORS.BLUE)
-
-print_colorfully(name, COLORS.YELLOW)
+clear_screen()
+print_title("Importando módulos propios:", COLORS.YELLOW)
+name = input_color("Ingrese su nombre: ", COLORS.CYAN, COLORS.BLUE)
+print_color(f"\nHola, {name}. Bienvenido a Python", COLORS.MAGENTA)
