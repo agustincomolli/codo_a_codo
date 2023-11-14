@@ -13,8 +13,11 @@ def connect_db():
         object: Un objeto que representa la conexión a una base de datos MySQL.
     """
     return mysql.connector.connect(
-        host="viaduct.proxy.rlwy.net", port=51991, user="root",
-        password="eggh-22cgFb-gBg4aH6DfFAC14edeFC6", database="railway",
+        host="viaduct.proxy.rlwy.net",
+        port=51991,
+        user="root",
+        password="eggh-22cgFb-gBg4aH6DfFAC14edeFC6",
+        database="railway",
     )
 
 
