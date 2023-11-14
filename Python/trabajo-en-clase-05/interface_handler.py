@@ -21,7 +21,7 @@ def color_text(text: str, color: str) -> str:
     return f"{color}{text}{COLORS.DEFAULT}"
 
 
-def print_color(message: str, color: str, end: str = "\n") -> None:
+def print_color(message: str, color: str = COLORS.DEFAULT, end: str = "\n") -> None:
     """
     Imprime un mensaje en un color especifico.
 
@@ -34,7 +34,7 @@ def print_color(message: str, color: str, end: str = "\n") -> None:
     print(color_text(message, color), end=end)
 
 
-def print_title(text: str, color: str, underline_char: str = "*"):
+def print_title(text: str, color: str = COLORS.DEFAULT, underline_char: str = "*"):
     """
     Imprime un título con una línea subrayada.
 
@@ -46,7 +46,8 @@ def print_title(text: str, color: str, underline_char: str = "*"):
         underline_char, color) * (len(text) + 1)}")
 
 
-def input_color(message: str, color_message: str, color_input: str) -> str:
+def input_color(message: str, color_message: str = COLORS.DEFAULT,
+                color_input: str = COLORS.DEFAULT) -> str:
     """
     Solicita un input al usuario mostrando el mensaje en un color y la respuesta en otro color.
 
@@ -82,9 +83,38 @@ def clear_screen():
 
     # `os.name` es `'nt'` si el sistema operativo es Windows
     # Entonces, si estamos en Windows, usamos el comando `'cls'` para borrar la pantalla
-    # De lo contrario, suponemos que estamos en un sistema tipo Unix (Linux/MacOS), 
+    # De lo contrario, suponemos que estamos en un sistema tipo Unix (Linux/MacOS),
     # por lo que usamos el comando `'clear'` para borrar la pantalla
     os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def press_enter_to_continue(prompt: str = "\nPresione ENTER para continuar..."):
+    """
+    Esta función pausa la ejecución del programa hasta que el usuario presiona ENTER.
+
+    :param prompt: El mensaje a mostrar al usuario. 'Presione ENTER para continuar' por defecto.
+    """
+    input(prompt)
+
+
+def print_table(data: list, headers: list):
+    """
+    Esta función imprime datos en formato tabular.
+
+    :param data: Lista de listas, donde cada lista es una fila de datos.
+    :param headers: Lista con los nombres de las columnas.
+    """
+    max_lengths = [len(header) for header in headers]
+    for row in data:
+        for index, cell in enumerate(row):
+            max_lengths[index] = max(max_lengths[index], len(str(cell)))
+
+    row_format = "    ".join(
+        ["{:<" + str(max_length) + "}" for max_length in max_lengths])
+    print(row_format.format(*headers))
+    for row in data:
+        print(row_format.format(*[str(cell) for cell in row]))
+
 
 if __name__ == "__main__":
     print_title("Funciones de consola", COLORS.RED)
