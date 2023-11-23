@@ -3,9 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Personas</title>
 </head>
 <body>
   
+  <header>
+    <h1>Personas</h1>
+  </header>
+
+  <main>
+    <div class="btn-wrapper">
+      <a href="/create"><button>Agregar persona</button></a>
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <th>Id.</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th></th>
+        </thead>
+        <tbody>
+          {% for person in persons%}
+            <tr>
+              <td>{{ person[0] }}</td>
+              <td>{{ person[1] }}</td>
+              <td>{{ person[2] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Agustín Comolli - 2023 😎</p>
+  </footer>
 </body>
 </html>
