@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{super()}}Detalles
+{% endblock %}
+
+{% block content %}
+  <h2>Detalles de la persona</h2>
+  <p>Nombre: {{ person.name }}</p>
+  <p>Edad: {{ person.age }}</p>
+  <a href="{{ url_for('index') }}"><button>Volver</button></a>
+{% endblock %}

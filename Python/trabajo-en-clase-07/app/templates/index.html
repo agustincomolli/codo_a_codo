@@ -1,43 +1,37 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personas</title>
-</head>
-<body>
-  
-  <header>
-    <h1>Personas</h1>
-  </header>
+{% extends "base.html" %}
 
-  <main>
-    <div class="btn-wrapper">
-      <a href="/create"><button>Agregar persona</button></a>
-    </div>
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <th>Id.</th>
-          <th>Nombre</th>
-          <th>Edad</th>
-          <th></th>
-        </thead>
-        <tbody>
-          {% for person in persons%}
-            <tr>
-              <td>{{ person[0] }}</td>
-              <td>{{ person[1] }}</td>
-              <td>{{ person[2] }}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  </main>
+{% block title %}
+{{super()}} Principal
+{% endblock %}
 
-  <footer>
-    <p>&copy; Agustín Comolli - 2023 😎</p>
-  </footer>
-</body>
-</html>
+{% block content %}
+  <div class="btn-wrapper">
+    <a href="{{ url_for('add_person') }}"><button>➕ Agregar</button></a>
+  </div>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <th>Id.</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th></th>
+      </thead>
+      <tbody>
+        {% for person in persons%}
+          <tr>
+            <td>{{ person.id }}</td>
+            <td><a href="{{ url_for('person_detail', id=person.id) }}">{{ person.name }}</a></td>
+            <td>{{ person.age }}</td>
+            <td>
+              <a href="{{ url_for('edit_person', id=person.id) }}" title="Editar">
+                <button>✍️ Editar</button></a>
+              <a href="{{ url_for('delete_person', id=person.id) }}" title="Eliminar">
+                <button>❌ Eliminar</button>
+              </a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
