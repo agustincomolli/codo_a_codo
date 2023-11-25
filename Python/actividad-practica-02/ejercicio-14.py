@@ -17,7 +17,7 @@ def delete_keys(dictionary: dict, keys: list) -> dict:
 
 
 def show_dictionary(dictionary: dict) -> None:
-    for key, value in user_data.items():
+    for key, value in dictionary.items():
         print(f"{key}: {value}")
 
 
@@ -33,8 +33,9 @@ user_data = {
 
 keys_to_delete = ["age", "address", "city", "province"]
 
+new_user_data = delete_keys(user_data, keys_to_delete)
+
 print("Diccionario original: ")
 show_dictionary(user_data)
-new_user_data = delete_keys(user_data, keys_to_delete)
 print("\nNuevo diccionario: ")
 show_dictionary(new_user_data)
