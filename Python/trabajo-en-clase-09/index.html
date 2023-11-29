@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Productos</title>
+</head>
+<body>
+
+  <h2>Añadir nuevo producto</h2>
+  <form id="addProductForm">
+    <label for="name">Nombre del Producto:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="description">Descripción del Producto:</label>
+    <textarea id="description" name="description"></textarea><br><br>
+
+    <input type="submit" value="Añadir Producto">
+  </form>
+
+  <h2>Productos</h2>
+  <table id="productsTable">
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Acciones</th>
+    </tr>
+    <!-- Los productos se cargarán aquí usando JavaScript -->
+  </table>
+
+  <script src="./script.js">
+    // A continuación, los códigos de JavaScript para manejar la API
+  </script>
+
+</body>
+</html>

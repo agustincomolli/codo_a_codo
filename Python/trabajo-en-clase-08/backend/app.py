@@ -1,8 +1,14 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import Session
+from flask_cors import CORS
 
 # Configurar la aplicación Flask
 app = Flask(__name__)
+
+# Esto permite a todas las rutas aceptar solicitudes de origen cruzado. Para
+# producción, deberías limitar esto a orígenes conocidos.
+CORS(app)
 
 
 def get_database_uri():
@@ -94,7 +100,7 @@ class Product:
             return product
 
 
-@app.route("/products", methods=["post"])
+@app.route("/products", methods=["POST"])
 def add_product():
     """
     Añadir un producto a través de una petición y devolver un mensaje.
@@ -112,6 +118,51 @@ def add_product():
     except:
         return jsonify({"message": "No se ha podido agregar el producto"})
 
+
+@app.route("/products", methods=["GET"])
+def get_products():
+    """
+    Obtener todos los productos de la base de datos y devolverlos en una respuesta JSON.
+    """
+    with app.app_context():
+        products = ProductModel.query.all()  # Obtener todos los productos
+        product_list = [
+            {"id": product.id, "name": product.name, "price": str(
+                product.price), "stock": product.stock}
+            for product in products
+        ]  # Crear una lista de diccionarios con los datos de los productos
+
+        # Devuelve la lista de productos como JSON
+        return jsonify(product_list)
+
+
+@app.route("/products/<int:product_id>", methods=["DELETE"])
+def delete_product(product_id):
+    """
+    Eliminar un producto por su ID de la base de datos y devolver un mensaje.
+    """
+    # Crea una sesión a tu base de datos
+    with Session(bind=db.engine) as session:
+        # Usa la nueva forma recomendada para obtener el producto
+        product = session.get(ProductModel, product_id)
+        # Si no encuentra el producto, devuelve un error
+        if product is None:
+            return jsonify({"message": "Producto no encontrado"}), 404
+
+        # Proceder a eliminar el producto
+        try:
+            session.delete(product)
+            session.commit()
+            return jsonify({"message": "Producto eliminado"}), 200
+        except Exception as e:
+            # Algún error ocurrió, como un error de base de datos
+            session.rollback()
+            return jsonify({"message": f"Error al eliminar el producto: {str(e)}"}), 500
+
+
+@app.route("/products/<int:product_id>", methods=["PUT"])
+def update_product():
+    pass
 
 if __name__ == "__main__":
     Product.setup_database()
